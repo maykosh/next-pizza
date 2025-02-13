@@ -36,7 +36,7 @@ export const Categories: React.FC<Props> = ({ className }) => {
                   categoryActiveId === category.id &&
                      "bg-white shadow-md shadow-gray-200 text-primary"
                )}
-               href={""}
+               href={`/#${category.name}`}
             >
                <button>{category.name}</button>
             </Link>
