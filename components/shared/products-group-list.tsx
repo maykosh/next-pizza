@@ -5,7 +5,8 @@ import { ProductCard } from "./product-card";
 import { cn } from "@/lib/utils";
 import { useIntersection } from "react-use";
 import { useCategoryStore } from "@/store";
-
+// import { Ingredient, Product, ProductItem } from "@prisma/client";
+// export type ProductWithRelations = Product & { items: ProductItem[]; ingredients: Ingredient[] };
 interface Props {
    title: string;
    // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -40,12 +41,14 @@ export const ProductsGroupList: React.FC<Props> = ({
          <Title text={title} size="lg" className="font-extrabold mb-5" />
          <div className={cn(listClassName, "grid grid-cols-3 gap-[50px]")}>
             {items.map((item) => (
+               
                <ProductCard
                   id={item.id}
                   key={item.id}
                   name={item.name}
                   imageUrl={item.imageUrl}
-                  price={item.items[0].price}
+                  price={item.productItem[0].price}
+
                />
             ))}
          </div>

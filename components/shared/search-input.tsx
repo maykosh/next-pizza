@@ -1,5 +1,5 @@
 "use client";
-import { useDebounse } from "@/hooks/useDebounse";
+import { useDebounse } from "@/hooks";
 import { cn } from "@/lib/utils";
 import { products } from "@/prisma/constants";
 import { API } from "@/services/api-client";
