@@ -4,7 +4,7 @@ import {
    ProductsGroupList,
    Title,
    TopBar,
-} from "@/components/shared";
+} from "@/shared/components/shared";
 import { prisma } from "@/prisma/prisma-client";
 
 export default async function Home() {
@@ -24,7 +24,7 @@ export default async function Home() {
          <Container className="mt-10">
             <Title text="Все пиццы" size="lg" className="font-extrabold" />
          </Container>
-         <TopBar categories={categories.filter((c) => c.products.length > 0)}/>
+         <TopBar categories={categories.filter((c) => c.products.length > 0)} />
          <Container className="pb-14 mt-10">
             <div className="flex gap-[80px]">
                <div className="w-[250px]">
